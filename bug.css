@@ -1,0 +1,9 @@
+The following CSS code has an unusual bug related to the `:focus-visible` pseudo-class:
+
+```css
+.my-element:focus-visible {
+  outline: 2px solid blue;
+}
+```
+
+This code seems simple, but it might not work as expected in all browsers or situations.  The issue arises from the `:focus-visible` pseudo-class's reliance on the browser's determination of whether to show a focus indicator.  Some browsers might not trigger `:focus-visible` when a user interacts with an element using assistive technologies or certain keyboard shortcuts.  This can make it seem like the focus styling isn't applied even when the element is focused, leading to accessibility problems.
