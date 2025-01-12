@@ -1,0 +1,13 @@
+The following CSS code provides a more robust solution by including a default outline, while still respecting `:focus-visible` for a more refined focus indication:
+
+```css
+.my-element {
+  outline: 1px solid lightgray; /* Default subtle outline */
+}
+
+.my-element:focus-visible {
+  outline: 2px solid blue;
+}
+```
+
+This solution ensures that a focus indication is always visible, and yet, uses `:focus-visible` to provide a more visually distinct focus style when appropriate. This avoids the accessibility pitfalls of the original code.
